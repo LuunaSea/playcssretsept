@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Young+Serif&display=swap');
 body {
     background-color: aqua;
+    overflow: hidden;
 }
 
 .heading{
@@ -8,7 +9,15 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     text-align: center;
+    position: relative; /*top-right-bottom-left*/
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode:forwards;
+}
 
+@keyframes heading {
+    0% {top: -250px}
+    100% { top: 100px}
 }
 
 .img {
@@ -23,6 +32,18 @@ body {
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 60px;
+    position: relative;
+    text-align: right;
+    animation: ingredients;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ingredients {
+    0% {right: -1000px;}
+    85% {right: 50px;}
+    100% {right: 0;}
+    
 }
 
 .ingredients-table {
@@ -34,6 +55,15 @@ body {
     border: 1px solid black;
     width: 50%;
     margin: 0 auto;
+    position: relative;
+    animation: instructions;
+    animation-duration: 5s;
+}
+
+@keyframes instructions {
+    0% {left: -1000px;}
+    85% { left: 50px;}
+    100% { left: 0;}
 }
 
 .instructions ol {
